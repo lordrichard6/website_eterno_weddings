@@ -1,0 +1,82 @@
+.gallery {
+    background-color: var(--color-secondary);
+    /* Soft Lavender background */
+    padding-bottom: 0;
+}
+
+.intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.showcaseReverse {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+    /* Flip order visually */
+}
+
+.showcaseReverse .textBox {
+    direction: ltr;
+    /* Reset text direction */
+}
+
+.imageBox {
+    position: relative;
+    height: 500px;
+    box-shadow: 20px 20px 0 var(--color-primary);
+    /* Shadow offset using brand color */
+}
+
+.imageBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textBox {
+    padding: 2rem;
+}
+
+.tag {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-charcoal);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.showcaseTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+
+    .showcase,
+    .showcaseReverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 2rem;
+    }
+
+    .imageBox {
+        height: 300px;
+        box-shadow: 10px 10px 0 var(--color-primary);
+    }
+}
